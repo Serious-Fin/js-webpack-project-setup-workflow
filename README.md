@@ -107,3 +107,25 @@ To remove clutter from ```dist/``` folder add te following to ```webpack.config.
 ```
 clean: true,
 ```
+
+## Installing Jest for TDD
+In console type
+```
+npm install --save-dev jest
+```
+To test a module just create a file named ```[module name].test.js``` and the test should look like:
+```
+const sum = require('./sum');
+
+test('...', () => {
+  expect(sum(...)).toBe(...);
+});
+```
+Also add the following to ```package.json```:
+```
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
